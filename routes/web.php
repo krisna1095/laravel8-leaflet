@@ -15,5 +15,10 @@ use App\Http\Controllers\TitikController;
 */
 
 
-Route::get('/',[TitikController::class,'index']);
-Route::get('/titik/json',[TitikController::class,'titik']);
+Route::get('/', [TitikController::class, 'index']);
+Route::get('/titik/edit/{id}', [TitikController::class, 'edit']);
+Route::post('/', [TitikController::class, 'store']);
+Route::get('/titik/delete/{id}', [TitikController::class, 'destroy']);
+Route::get('/titik/json', [TitikController::class, 'titik']);
+Route::get('/titik/desa/{id}', [TitikController::class, 'desa']);
+Route::get('/getDesa/{id}', [TitikController::class, 'getDesa']);
